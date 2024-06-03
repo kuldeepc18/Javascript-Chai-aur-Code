@@ -4,7 +4,7 @@ var accountPassword = "12345"
 accountCity = "Mumbai"
 let accountState;         //semicolon is not compulsory
 
-//accountID = 23  // not allowed  
+//accountID = 23  // We cannot change const variable 
 
 accountEmail = "kuldeep@google.com"
 accountPassword = "54321"
@@ -16,4 +16,4 @@ accountCity = "Delhi"
 
 console.log("Account ID: " + accountID);
 
-console.table([accountID, accountEmail, accountPassword, accountCity])
+console.table([accountID, accountEmail, accountPassword, accountCity])  //prints all the variables in tabular format 
