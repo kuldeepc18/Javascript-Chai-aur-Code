@@ -18,7 +18,7 @@ console.log(id === anotherId);
 
 
 
-// Reference (Non primitive)
+//   Non primitive --> call by reference
 
 // Array, Objects, Functions
 
