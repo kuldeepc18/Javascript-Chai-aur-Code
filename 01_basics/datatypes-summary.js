@@ -46,20 +46,20 @@ console.log(typeof anotherId);
 
 let myYoutubeName = "firstChannel"      //String is primitive datatype, it uses Stack
 
-let anotherName = myYoutubeName
+let anotherName = myYoutubeName         //A copy is made of myYoutubeName and then it is changed
 anotherName = "secondChannel"
 
 console.log(myYoutubeName);
 console.log(anotherName);
 
-let userOne = {
+let userOne = {                     //Object is non-primitive data type, it uses heap 
     email: "userOne@gmail.com",
     upi: "userOne@ybl"
 }
 
-let userTwo =  userOne
+let userTwo =  userOne              //Both refer to the same email and upi 
 
 userTwo.email = "userTwo@gmail.com"
 
-console.log(userOne);
+console.log(userOne);               //By call by reference, both value is changed 
 console.log(userTwo);
