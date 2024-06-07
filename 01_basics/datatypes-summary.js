@@ -35,3 +35,31 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubeName = "firstChannel"      //String is primitive datatype, it uses Stack
+
+let anotherName = myYoutubeName
+anotherName = "secondChannel"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email: "userOne@gmail.com",
+    upi: "userOne@ybl"
+}
+
+let userTwo =  userOne
+
+userTwo.email = "userTwo@gmail.com"
+
+console.log(userOne);
+console.log(userTwo);
