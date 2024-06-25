@@ -50,3 +50,27 @@ console.log(Object.values(redditUser));     //returns the array of values
 console.log(Object.entries(redditUser));     //returns an array of key-values pairs
 
 console.log(redditUser.hasOwnProperty('isLoggedIn'));      //Determines whether an object has a property with the specified name.
+
+//Object destructuring
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "kuldeep"
+}
+
+//course.courseInstructor
+
+  //{konsi value extract karni hai}  =  //kahan se value extract karni hai 
+const {courseInstructor: instructor} = course
+      //here courseInstructor is renamed as instructor   //not compulsory
+
+// console.log(courseInstructor);
+console.log(instructor);
+
+// All api's call are in JSON format same as object 
+// {
+//     coursename: "js in hindi",
+//     price: "999",
+//     courseInstructor: "kuldeep"
+// }
