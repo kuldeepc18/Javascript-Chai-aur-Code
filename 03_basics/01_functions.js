@@ -34,7 +34,7 @@ function loginUserMessage(username = "griff"){      //default value
 }
 
 // console.log(loginUserMessage("Kuldeep"));
-// console.log(loginUserMessage());
+console.log(loginUserMessage());
 
 function calculateCartPrice(val1, val2, ...num1){       //here, triple dot acting as rest operator as it packs all the value in a bundle and returns an array of all the values
     return num1
