@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit and Remove Elements</title>
+</head>
+
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    //adding an element
+    function addLanguage(langname) {
+        const li = document.createElement("li");
+        li.innerHTML = `${langname}`
+        document.querySelector(".language").appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("java")
+
+    function addOptimizeLanguage(langname) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector(".language").appendChild(li)
+    }
+    addOptimizeLanguage("golang")
+
+    //1. Edit - replace
+    const secondLang = document.querySelector("li:nth-child(2)")
+    //console.log(secondLang)     //prints whole li having python text -->
+    //secondLang.innerHTML = "C++"
+    const newLi = document.createElement("li")
+    newLi.textContent = "C++"
+    secondLang.replaceWith(newLi)
+
+    //2. Edit - replace
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>Typescript</li>"
+
+    //Remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+
+</html>
