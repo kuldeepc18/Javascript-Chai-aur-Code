@@ -34,4 +34,4 @@ console.log(url.replace('%20', '-'))
 
 console.log(url.includes('sun'))         //returns true or false
 
-console.log(gameName.split('-'));        //returns an array after spliting at '-'
+console.log(gameName.split('-'));        //returns an array after splitting at '-'
