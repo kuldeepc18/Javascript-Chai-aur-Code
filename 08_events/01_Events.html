@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML EVENTS</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" id="photoshop"
+                    src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="japan"
+                    src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="river"
+                    src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="owl"
+                    src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <img width="200px" id="prayer"
+                    src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+                    alt="" />
+            </li>
+            <li>
+                <a style="color: aliceblue" href="https://google.com" id="google">Google</a>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    // don't use this approach as onclick provides less features, instead use event listeners
+    // document.getElementById("owl").onclick = function () {
+    //     alert("Owl is Clicked")
+    //}
+
+    //attachEvent() : used to register an event handler function for a specified event on an object. It was primarily used in older versions of Internet Explorer (IE) to handle events.
+    //jQuery - on() : used to attach one or more event handlers for the selected elements.
+
+    //Types of Events --->
+    //type, timestamp, defaultPrevented
+    //target, toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY
+    //altkey, ctrlkey, shiftkey, keyCode
+
+    //best approach
+    //3rd parameter is by default false in addEventListener method
+
+    //Event Capturing Phase -->
+    /*  document.getElementById("images").addEventListener("click", function (e) {
+        //alert("Owl is clicked again")
+        console.log("clicked inside the ul");
+    }, true)
+    
+    document.getElementById("owl").addEventListener("click", function (e) {
+        console.log("owl clicked");
+    }, true)
+
+
+    //Event Bubbling Phase -->
+    document.getElementById("images").addEventListener(
+        "click",
+        function (e) {
+            //alert("Owl is clicked again")
+            console.log("clicked inside the ul");
+        },
+        false
+    );
+
+    document.getElementById("owl").addEventListener(
+        "click",
+        function (e) {
+            console.log("owl clicked");
+            e.stopPropagation(); //It is a method of the `Event` object that prevents the current event from bubbling up the DOM tree
+        },
+        false
+    );
+
+    document.getElementById("google").addEventListener(
+        "click",
+        function (e) {
+            console.log("google clicked");
+            e.preventDefault();
+            e.stopPropagation();
+        },
+        false
+    );
+*/
+    //when image is clicked, it is removed
+    document.querySelector("#images").addEventListener("click", function(e) {
+        //console.log(e.target.parentNode);     //parentNode returns the parent element of the current element. It points to the element that contains the current element.
+        console.log(e.target.tagName);      //tagName returns the name of an element in uppercase when it is clicked.
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove()
+        }
+
+        //removeIt.parentNode.removeChild(removeIt)     //same as removeIt.remove()
+
+    }, false)
+
+
+/* 
+Event Propagation : Event propagation is a mechanism that defines how events travel through the DOM tree when an event is triggered on an element. 
+                By default, event handlers are attached to the bubbling phase. 
+                
+Event Bubbling Phase : After the event reaches the target element, it "bubbles up" through the parent elements towards the top. 
+                First the target element (child) is executed and then its parent element is executed. 
+                
+Event Capturing Phase: The event starts at the outermost element (window or document) and "trickles down" towards the target element. 
+                Event handlers registered for the capturing phase will be executed first, before the target element. 
+*/
+
+
+</script>
+
+</html>
