@@ -112,4 +112,30 @@ const requestUrl = 'https://api.github.com/users/kuldeepc18'
     xhr.send();
 
 
+
+Explaination of the above code :
+
+Sure, I'll explain the provided code step by step:
+
+1. const requestUrl = 'https://api.github.com/users/kuldeepc18' : Here, a constant variable `requestUrl` is declared and assigned the value 'https://api.github.com/users/kuldeepc18'. This URL is the endpoint from which data will be fetched.
+
+2. const xhr = new XMLHttpRequest(); : An XMLHttpRequest object named `xhr` is created. This object is used to interact with servers.
+
+3. xhr.open('GET', requestUrl) : The `open()` method of the `xhr` object is called to initialize the request. It takes two parameters: the HTTP method ('GET' in this case) and the URL to which the request is sent (`requestUrl`).
+
+4.  xhr.onreadystatechange = function () { ... } : An event handler is set up to listen for changes in the `xhr` object's `readyState` property. The `readyState` property holds the status of the XMLHttpRequest. The function provided will be called every time the `readyState` changes.
+
+5. console.log(xhr.readyState); : This line logs the current `readyState` of the `xhr` object to the console. The `readyState` property indicates the state of the request (0: request not initialized, 1: server connection established, 2: request received, 3: processing request, 4: request finished and response is ready).
+
+6. if (xhr.readyState === 4) { ... } : This condition checks if the `readyState` is equal to 4, which means the request is complete and the response is ready to be processed.
+
+7. const data = JSON.parse(this.responseText) : If the `readyState` is 4, the response text from the server is parsed as JSON and stored in the `data` variable.
+
+8. console.log(typeof data); : The type of the `data` variable is logged to the console. This is useful for debugging and understanding the structure of the response.
+
+9. console.log(data.followers); : Finally, the number of followers from the `data` object (assuming it contains follower information) is logged to the console.
+
+10. xhr.send(); : The `send()` method is called on the `xhr` object to send the request to the server.
+
+This code sets up an XMLHttpRequest to fetch data from the specified URL, processes the response when it's ready, and logs information about the response to the console.
 */
