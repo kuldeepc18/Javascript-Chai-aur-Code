@@ -80,3 +80,26 @@ const userTwo = new User("Javascript", 11, false)
 console.log(userOne.constructor);
 //console.log(userOne);
 //console.log(userTwo);
+
+/*
+The `instanceof` operator in JavaScript is used to check if an object belongs to a particular class or constructor function. It returns `true` if the object is an instance of the specified class or constructor function, otherwise it returns `false`.
+
+Here's a simple example to illustrate the usage of `instanceof`:
+
+```javascript
+ Constructor function for creating Person objects
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+ Creating an instance of Person
+const person = new Person('Alice', 30);
+
+ Using instanceof to check if person is an instance of Person
+console.log(person instanceof Person); // Output: true
+```
+
+In this example, `person instanceof Person` returns `true` because the `person` object was created using the `Person` constructor function.
+
+*/
