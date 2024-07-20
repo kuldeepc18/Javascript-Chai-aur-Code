@@ -59,7 +59,7 @@ function User(username, loginCount, isLoggedIn) {
     this.greeting = function () {
         console.log(`Welcome ${this.username}`);
     }
-    return this
+    return this     //it is not compulsory to write as `this` keyword is implicitly returned
 }
 
 // without new keyword userTwo will overwrite userOne  
