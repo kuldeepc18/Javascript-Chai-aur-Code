@@ -17,7 +17,7 @@ function createUser(username, score = 1) {
 }
 
 createUser.prototype.increment = function () {
-    this.score++
+    this.score++       // `this` matlab: jisne call liya, uske paas jaao
 }
 
 createUser.prototype.printMe = function(){
