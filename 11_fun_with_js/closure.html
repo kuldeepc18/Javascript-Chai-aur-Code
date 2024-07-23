@@ -7,12 +7,13 @@
     <title>Closure aur chai</title>
 </head>
 
-<body style="background-color: #313131;">
+<body style="background-color: #212121;">
     <button id="orange">Orange</button>
     <button id="green">Green</button>
 </body>
 
 <script>
+    // MDN Example:
     // function init() {
     //     let name = "Mozilla";
     //     function displayName() {
@@ -23,7 +24,7 @@
     // init();
 
     // function outer(){
-    //     let username = "hitesh"
+    //     let username = "kuldeep"
     //     console.log("OUTER", secret);
     //     function inner(){
     //         let secret = "my123"
@@ -41,19 +42,53 @@
     // console.log("TOO OUTER", username);
 
 
+/*
+
+
+`Lexical scope` (also known as static scope) is a fundamental concept is JS that variables are resolved in nested functions. Nested functions have access to variables in their outer scope.
+
+*Key Points of Lexical Scope*:
+-> Variables are accessible within the function they are declared in and any nested functions.
+-> Nested functions can access variables from their parent functions.
+-> Variables are not accessible outside the function they are declared in.
+
+In the above code snippet, 
+- username is declared in outer function and the inner function can access it.
+- two separate inner functions declared in the scope of outer function can access same username declared in outer function.
+- variable declared in first inner function is not accessible to another inner function 
+- variable declared in inner function is not accessible to outer function
+
+
+*/
+
+
+    // MDN Example: 
     // function makeFunc() {
     //     const name = "Mozilla";
     //     function displayName() {
     //         console.log(name);
     //     }
-    //     return displayName;
+    //     return displayName;      // whole inner function along with lexical scope of outer function will return i.e its execution context
     // }
 
     // const myFunc = makeFunc();
     // myFunc();
 
+
+/*
+
+
+A `closure` is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's Lexical scope from an inner function.
+
+
+*/
+
 </script>
 <script>
+
+    //Practical implementation
+
+    //not good method to do 
     // document.getElementById("orange").onclick = function(){
     //     document.body.style.backgroundColor = `orange`
     // }
