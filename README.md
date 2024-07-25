@@ -46,7 +46,3 @@ A big thank you to Hitesh Sir for offering this fantastic JavaScript course for 
 
 - YouTube: [Hitesh Choudhary](https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A)
 - Twitter: [@hiteshchoudhary](https://twitter.com/hiteshchoudhary)
-
-## License
-
-This repository is licensed under the [MIT License](LICENSE).
