@@ -6,7 +6,7 @@ Welcome to the **JavaScript Chai aur Code** repository! 🚀 This repository is 
 
 Designed for beginners, this course aims to build a solid foundation in JavaScript and web development. The course covers:
 
-![JavaScript Chai aur Code](https://i.ytimg.com/vi/pDPAcYdSse8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCqjqxZ3vAW25UbmG3QprMPZz9FEw)
+![JavaScript Chai aur Code](https://img.youtube.com/vi/xAvTgCsCHLs/sddefault.jpg)
 
 - Basic JavaScript syntax
 - Data types and variables
@@ -46,7 +46,3 @@ A big thank you to Hitesh Sir for offering this fantastic JavaScript course for 
 
 - YouTube: [Hitesh Choudhary](https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A)
 - Twitter: [@hiteshchoudhary](https://twitter.com/hiteshchoudhary)
-
-## License
-
-This repository is licensed under the [MIT License](LICENSE).
