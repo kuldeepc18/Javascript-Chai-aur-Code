@@ -45,8 +45,8 @@ A big thank you to Hitesh Sir for offering this fantastic JavaScript course for 
 ## Connect with Hitesh Sir
 
 - YouTube: [Hitesh Choudhary](https://www.youtube.com/channel/UCXgGY0wkgOzynnHvSEVmE3A)
-<<<<<<< HEAD
+
 - Twitter: [@hiteshchoudhary](https://twitter.com/hiteshchoudhary)
-=======
+
 - Twitter: [@hiteshchoudhary](https://twitter.com/hiteshchoudhary)
->>>>>>> b9f605a8a70c8fe4276d9d8192d34cdfcf3f0ec3
+
